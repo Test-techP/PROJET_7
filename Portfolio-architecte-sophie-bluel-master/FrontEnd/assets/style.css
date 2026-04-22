@@ -1,0 +1,429 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 35px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+}
+
+/*ajout*/
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ===== MODE ÉDITION ===== */
+.hidden {
+  display: none !important;
+}
+
+/* Icône Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'wght' 400; /* épaisseur */
+  font-size: 20px;
+  vertical-align: middle;
+}
+.edit-mode {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* espace entre icône et texte */
+  font-weight: bold;
+}
+.edit-button {
+    display: flex;
+    gap: 5px;
+    padding: 8px 18px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 39px;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+nav a:hover {
+  color: #B1663C;
+}
+
+h1 a {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	color: inherit;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filters button {
+    margin: 5px;
+    margin-bottom: 28px;
+    padding: 10px 30px;
+    border: 1px solid #1D6154;
+    border-radius: 20px;
+    background-color: white;
+    color: #1D6154;
+    cursor: pointer;
+    font-family: 'Syne';
+    font-weight: bold;
+}
+
+.filters button:hover {
+  background-color: #1D6154;
+  color: white;
+}
+
+/*Login*/
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-page h2 {
+  text-align: center;
+  margin-bottom: 30px; 
+}
+.login-btn {
+	font-weight: bold;
+}
+
+.login-page input,
+.login-page label,
+.forgot-password{
+	font-family: 'Work Sans'; 
+
+}
+.login-page input {
+	margin-bottom: 24px;
+	border: none;
+	box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+	width: 379px;
+	height: 51px;
+}
+.login-page input:focus {
+  outline: none; 
+}
+.login-page form {
+  display: flex;
+  flex-direction: column;
+  width: 379px;
+}
+.login-page label {
+	margin: 7px 0px;
+}
+
+.login-page button {
+  margin: 14px;
+  width: 179px;
+  height: 36px;
+  border: 1px solid #1D6154;
+  border-radius: 20px;
+  background-color:#1D6154;
+  color: white;
+  cursor: pointer;
+  font-family: 'Syne'; 
+  align-self: center;
+}
+
+
+.forgot-password {
+    margin-top: 30px;
+    margin-bottom: 1px;
+    text-align: center;
+    border-bottom: 1px solid;
+    color: black;
+    font-weight: bold;
+    width: fit-content;
+    align-self: center;
+	text-decoration: none;
+}
+/* Cache la checkbox */
+.hidden {
+  display: none;
+}
+
+/* Modale centrée */
+.modal {
+  display: none; /* cachée par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+   margin: 0;
+
+  display: flex;              /* flex dès le départ */
+  justify-content: center;    /* centre horizontalement */
+  align-items: center;        /* centre verticalement */
+}
+
+.modal.active {
+  display: flex; /* on active simplement la visibilité */
+}
+
+.modal-content {
+  background: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+
+  /* retirer position: absolute ou float */
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+}
+.modal-form input, select{
+	margin-bottom: 24px;
+    border: none;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+    width: 379px;
+    height: 51px;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Contenu 2 caché par défaut */
+.content-add-photo {
+  display: none;
+}
+
+/* Lorsque la checkbox est cochée, bascule les contenus */
+#toggle-add-photo:checked ~ .modal .content-gallery {
+  display: none;
+}
+
+#toggle-add-photo:checked ~ .modal .content-add-photo {
+  display: block;
+}
+
+.modal-gallery img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 15px 0;
+}
+
+button, .btn-add-photo {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #1D6154;
+  background-color: #1D6154;
+  color: white;
+  cursor: pointer;
+}
+/*Fin ajout*/
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+	padding-bottom: 15px;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
