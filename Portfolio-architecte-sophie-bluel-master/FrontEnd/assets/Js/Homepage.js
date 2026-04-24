@@ -26,7 +26,7 @@ function CreateProjects (work){
     figure.appendChild(figcaption);
 }
 
-//utiliser fetchprojets pour afficher la gallerie d'images dans la popuup 
+//utiliser fetchprojets pour afficher la gallerie d'images dans la popup 
 
 //CreateProjects ();
 
