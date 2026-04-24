@@ -51,56 +51,8 @@
     		</button>
   		</div>
 		<div class="filters">
-  			<button data-filter="all">Tous</button>
-  			<!--<button data-filter="objets">Objets</button>
-  			<button data-filter="appartements">Appartements</button>
-  			<button data-filter="hotels">Hotels & Restaurants</button>-->
 		</div>
 		<div class="gallery">
-			<!-- <figure>
-				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
-				<figcaption>Abajour Tahina</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-v.png" alt="Appartement Paris V">
-				<figcaption>Appartement Paris V</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/restaurant-sushisen-londres.png" alt="Restaurant Sushisen - Londres">
-				<figcaption>Restaurant Sushisen - Londres</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/la-balisiere.png" alt="Villa “La Balisiere” - Port Louis">
-				<figcaption>Villa “La Balisiere” - Port Louis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/structures-thermopolis.png" alt="Structures Thermopolis">
-				<figcaption>Structures Thermopolis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-x.png" alt="Appartement Paris X">
-				<figcaption>Appartement Paris X</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/le-coteau-cassis.png" alt="Pavillon “Le coteau” - Cassis">
-				<figcaption>Pavillon “Le coteau” - Cassis</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/villa-ferneze.png" alt="Villa Ferneze - Isola d’Elba">
-				<figcaption>Villa Ferneze - Isola d’Elba</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/appartement-paris-xviii.png" alt="Appartement Paris XVIII">
-				<figcaption>Appartement Paris XVIII</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/bar-lullaby-paris.png" alt="Bar “Lullaby” - Paris">
-				<figcaption>Bar “Lullaby” - Paris</figcaption>
-			</figure>
-			<figure>
-				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
-				<figcaption>Hotel First Arte - New Delhi</figcaption>
-			</figure>-->
 		</div>
 	</section>
 	<section id="contact">
@@ -126,30 +78,27 @@
 	</nav>
 </footer>
 
-<!-- Checkbox caché pour simuler le clic sur "Ajouter une photo" -->
-<input type="checkbox" id="toggle-add-photo" class="hidden">
-
-<section class="modal">
+<section class="modal hidden">
   <div class="modal-content">
+
     <span class="close">&times;</span>
 
-    <!-- Contenu 1 : Galerie photo -->
+    <!-- VIEW 1 -->
     <div class="content-gallery">
       <h2>Galerie photo</h2>
-      <div class="modal-gallery">
-       
-      </div>
+      <div class="modal-gallery"></div>
       <hr>
-      <!-- label lié à la checkbox : simule le clic -->
-      <label for="toggle-add-photo" class="btn-add-photo">Ajouter une photo</label>
+      <button class="btn-open-add">Ajouter une photo</button>
     </div>
 
-    <!-- Contenu 2 : Ajout photo -->
-    <div class="content-add-photo">
+    <!-- VIEW 2 -->
+    <div class="content-add-photo hidden">
       <h2>Ajout photo</h2>
+
       <div class="modal-form">
         <label>Titre</label>
         <input type="text">
+
         <label>Catégorie</label>
         <select>
           <option>Objets</option>
@@ -157,6 +106,7 @@
           <option>Hotels & Restaurants</option>
         </select>
       </div>
+
       <hr>
       <button class="btn-validate">Valider</button>
     </div>
