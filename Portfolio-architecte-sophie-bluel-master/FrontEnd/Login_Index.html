@@ -2,12 +2,14 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/style.css">
 </head>
-<body class="logged-out">
+
+<body>
 
   <header>
     <h1>
@@ -19,30 +21,26 @@
         <li><a href="Homepage_Index.html#contact">contact</a></li>
         <li><a href="#" class="login-btn">login</a></li>
         <li><a href="#" class="logout-btn hidden">logout</a></li>
-        <li>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/icons/instagram.png" alt="Instagram">
-          </a>
-        </li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="./assets/icons/instagram.png" alt="Instagram"></a></li>
       </ul>
     </nav>
   </header>
 
-<main class="login-page">
+  <main class="login-page">
+    <h2>Log in</h2>
 
-  <h2>Log in</h2>
+    <form id="login-form">
+      <label for="email">E-mail</label>
+      <input id="email" type="email">
+      <label for="password">Mot de passe</label>
+      <input id="password" type="password">
+      <button type="submit">Se connecter</button>
+      <a href="#" class="forgot-password">Mot de passe oublié</a>
+    </form>
+  </main>
 
-  <form>
-    <label>E-mail</label>
-    <input type="email">
-
-    <label>Mot de passe</label>
-    <input type="password">
-
-    <button type="submit">Se connecter</button>
-    <a href="#" class="forgot-password">Mot de passe oublié</a>
-  </form>
-</main>
+  <script src="./assets/Js/Login.js"></script>
 
 </body>
+
 </html>
