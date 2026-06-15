@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Sophie Bluel - Architecte d'intérieur</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
-	<meta name="description" content="">
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+		rel="stylesheet">
+	<meta name="description"
+		content="Portfolio de Sophie Bluel, architecte d'intérieur. Découvrez ses projets et contactez-la.">
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 	<link rel="stylesheet" href="./assets/style.css">
 	<script src="assets/Js/Homepage.js" defer></script>
@@ -16,20 +19,21 @@
 <body>
 
 	<div class="edit-mode hidden">
-  		<span class="material-symbols-outlined">edit_square</span>
-  		Mode édition
+		<span class="material-symbols-outlined">edit_square</span>
+		Mode édition
 	</div>
 
 	<header>
 		<h1>
-  			<a href="#"> Sophie Bluel <span>Architecte d'intérieur</span></a>
+			<a href="#"> Sophie Bluel <span>Architecte d'intérieur</span></a>
 		</h1>
 		<nav>
 			<ul>
-			<li><a href="#portfolio">projets</a></li>
-			<li><a href="#contact">contact</a></li>
-			<li><a href="Login_Index.html" id="login-link"> login</a></li>
-			<li><a href="#" target="_blank" rel="noopener noreferrer"><img src="./assets/icons/instagram.png" alt="Instagram"></a></li>
+				<li><a href="#portfolio">projets</a></li>
+				<li><a href="#contact">contact</a></li>
+				<li><a href="Login_Index.html" id="login-link"> login</a></li>
+				<li><a href="#" target="_blank" rel="noopener noreferrer"><img src="./assets/icons/instagram.png"
+							alt="Instagram"></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -41,19 +45,23 @@
 			</figure>
 			<article>
 				<h2>Designer d'espace</h2>
-				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
-				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
-				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison
+					finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les
+					couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du
+					chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG,
+					décorateur(trice)</p>
 			</article>
 		</section>
 		<section id="portfolio">
 			<div class="portfolio-header">
-    			<h2>Mes Projets</h2>
-    			<button class="edit-button hidden">
-      				<span class="material-symbols-outlined">edit_square</span>
-      				modifier
-    			</button>
-  			</div>
+				<h2>Mes Projets</h2>
+				<button type="button" class="edit-button hidden">
+					<span class="material-symbols-outlined">edit_square</span>
+					modifier
+				</button>
+			</div>
 			<div class="filters">
 			</div>
 			<div class="gallery">
@@ -83,97 +91,62 @@
 	</footer>
 
 	<section class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
 
-    <div class="modal-content">
+			<!-- VIEW 1 : galerie des projets dans la modale -->
+			<div class="content-gallery">
+				<h2>Galerie photo</h2>
+				<div class="modal-gallery">
+					<!-- injecté dynamiquement -->
+				</div>
+				<hr>
+				<button type="button" class="btn-open-add">
+					Ajouter une photo
+				</button>
+			</div> <!-- FIN content-gallery -->
 
-        <span class="close">&times;</span>
+			<!-- VIEW 2  formulaire d'ajout d'un nouveau projet -->
+			<div class="content-add-photo hidden">
+				<div class="modal-header">
+					<span class="back-arrow material-symbols-outlined">
+						arrow_back
+					</span>
+					<h2>Ajout photo</h2>
+					<span class="fake-space"></span>
+				</div>
 
-        <!-- VIEW 1 -->
-        <div class="content-gallery">
+				<div class="upload-box">
+					<span class="material-symbols-outlined upload-icon">
+						image
+					</span>
+					<label for="image-upload" class="upload-btn">
+						+ Ajouter photo
+					</label>
+					<p class="upload-info">
+						jpg, png : 4mo max
+					</p>
+					<input id="image-upload" type="file" accept=".jpg,.jpeg,.png" hidden>
+					<img class="preview-image hidden" alt="Prévisualisation image">
+				</div>
 
-            <h2>Galerie photo</h2>
-
-            <div class="modal-gallery">
-                <!-- injecté dynamiquement -->
-            </div>
-
-            <hr>
-
-            <button class="btn-open-add">
-                Ajouter une photo
-            </button>
-
-        </div> <!-- FIN content-gallery -->
-
-
-        <!-- VIEW 2 -->
-        <div class="content-add-photo hidden">
-
-            <div class="modal-header">
-
-                <span class="back-arrow material-symbols-outlined">
-                    arrow_back
-                </span>
-
-                <h2>Ajout photo</h2>
-
-                <span class="fake-space"></span>
-
-            </div>
-
-            <div class="upload-box">
-
-                <span class="material-symbols-outlined upload-icon">
-                    image
-                </span>
-
-                <label for="image-upload" class="upload-btn">
-                    + Ajouter photo
-                </label>
-				<p class="upload-info">
-        			jpg, png : 4mo max
-    			</p>
-                <input
-                    id="image-upload"
-                    type="file"
-                    accept=".jpg,.jpeg,.png"
-                    hidden
-                >
-
-                <img
-                    class="preview-image hidden"
-                    alt="Prévisualisation image"
-                >
-
-            </div>
-
-            <form class="modal-form">
-
-                <label for="title">Titre</label>
-                <input id="title" type="text">
-
-                <label for="category">Catégorie</label>
-
-                <select id="category">
-                    <option></option>
-                </select>
-
-                <hr>
-
-                <button
-                    type="submit"
-                    class="btn-validate"
-                >
-                    Valider
-                </button>
-
-            </form>
-
-        </div> <!-- FIN content-add-photo -->
-
-    </div> <!-- FIN modal-content -->
-
-</section>
+				<form class="modal-form">
+					<label for="title">Titre</label>
+					<input id="title" type="text">
+					<label for="category">Catégorie</label>
+					<select id="category">
+						<option value="" selected disabled>
+							Sélectionnez une catégorie
+						</option>
+					</select>
+					<hr>
+					<button type="submit" class="btn-validate">
+						Valider
+					</button>
+				</form>
+			</div> <!-- FIN content-add-photo -->
+		</div> <!-- FIN modal-content -->
+	</section>
 </body>
 
 </html>

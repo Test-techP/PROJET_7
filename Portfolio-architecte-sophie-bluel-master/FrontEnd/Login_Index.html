@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+  <title>Sophie Bluel - Connexion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-
+  
   <header>
     <h1>
       <a href="Homepage_Index.html">Sophie Bluel <span>Architecte d'intérieur</span></a>
@@ -20,8 +22,8 @@
         <li><a href="Homepage_Index.html#portfolio">projets</a></li>
         <li><a href="Homepage_Index.html#contact">contact</a></li>
         <li><a href="#" class="login-btn">login</a></li>
-        <li><a href="#" class="logout-btn hidden">logout</a></li>
-        <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="./assets/icons/instagram.png" alt="Instagram"></a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><img src="./assets/icons/instagram.png"
+              alt="Instagram"></a></li>
       </ul>
     </nav>
   </header>
@@ -31,10 +33,11 @@
 
     <form id="login-form">
       <label for="email">E-mail</label>
-      <input id="email" type="email">
+      <input id="email" name="email" type="email" autocomplete="email" required>
       <label for="password">Mot de passe</label>
-      <input id="password" type="password">
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
       <button type="submit">Se connecter</button>
+      <p id="error-message" class="hidden" role="alert" aria-live="polite"></p>
       <a href="#" class="forgot-password">Mot de passe oublié</a>
     </form>
   </main>
