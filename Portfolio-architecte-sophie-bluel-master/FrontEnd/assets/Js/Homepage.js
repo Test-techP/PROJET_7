@@ -1,32 +1,18 @@
+//#region constantes globales 
 const URL = "http://localhost:5678/api/";
 const gallery = document.querySelector(".gallery");
-
 const titleInput = document.querySelector("#title");
 const categorySelect = document.querySelector("#category");
 const validateBtn = document.querySelector(".btn-validate");
-
-// Gestion de l'ouverture, fermeture et navigation entre les deux vues de la modale
-const modal = document.querySelector(".modal");
-const btnEdit = document.querySelector(".edit-button");
-const btnClose = document.querySelector(".close");
-
-
 const view1 = document.querySelector(".content-gallery");
 const view2 = document.querySelector(".content-add-photo");
-const btnAdd = document.querySelector(".btn-open-add");
-const backArrow = document.querySelector(".back-arrow");
-
-
 const imageInput = document.querySelector("#image-upload");
 const previewImage = document.querySelector(".preview-image");
 const uploadIcon = document.querySelector(".upload-icon");
-
 const form = document.querySelector(".modal-form");
-
 const uploadBtn = document.querySelector(".upload-btn");
 const uploadInfo = document.querySelector(".upload-info");
-
-
+//#endregion
 
 //#region algorithme principal
 let workList = [];
@@ -263,13 +249,16 @@ function fillCategories(categories) {
         select.appendChild(option);
     });
 }
-
-
 //#endregion
 
 //#region intializeHandlers
-
+//Initialise les gestionnaires d'événements de la modale et du formulaire d'ajout.
 function intializeHandlers() {
+    const modal = document.querySelector(".modal");
+    const backArrow = document.querySelector(".back-arrow");
+    const btnAdd = document.querySelector(".btn-open-add");
+    const btnClose = document.querySelector(".close");
+    const btnEdit = document.querySelector(".edit-button");
 
     titleInput.addEventListener("input", checkFormValidity);
     categorySelect.addEventListener("change", checkFormValidity);
@@ -406,5 +395,4 @@ function handleImagePreview() {
 
     checkFormValidity();
 }
-
 //#endregion
